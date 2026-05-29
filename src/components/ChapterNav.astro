@@ -1,0 +1,47 @@
+---
+interface Props {
+  current: string;
+  prev?: { href: string; label: string };
+  next?: { href: string; label: string };
+}
+
+const { current, prev, next } = Astro.props;
+---
+
+<div class="border-b border-white/10 bg-[#0a0a0f]">
+  <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between text-sm">
+    <div class="flex items-center gap-x-4">
+      <a href="/" class="flex items-center gap-x-2 text-[#a1a1aa] hover:text-white transition-colors" title="Home">
+        <i class="fa-solid fa-home text-base"></i>
+      </a>
+
+      {prev ? (
+        <a href={prev.href} class="flex items-center gap-x-2 text-[#a1a1aa] hover:text-[#5EEAD4] transition-colors">
+          <i class="fa-solid fa-arrow-left text-lg"></i>
+          <span class="hidden md:inline text-xs tracking-widest">{prev.label}</span>
+        </a>
+      ) : (
+        <span class="flex items-center gap-x-2 text-[#555]">
+          <i class="fa-solid fa-arrow-left text-lg"></i>
+          <span class="hidden md:inline text-xs tracking-widest">PREV</span>
+        </span>
+      )}
+    </div>
+
+    <div class="font-medium text-[#5EEAD4] tracking-[1px] text-sm">{current}</div>
+
+    <div class="flex items-center gap-x-4">
+      {next ? (
+        <a href={next.href} class="flex items-center gap-x-2 text-[#a1a1aa] hover:text-[#5EEAD4] transition-colors">
+          <span class="hidden md:inline text-xs tracking-widest">{next.label}</span>
+          <i class="fa-solid fa-arrow-right text-lg"></i>
+        </a>
+      ) : (
+        <span class="flex items-center gap-x-2 text-[#555]">
+          <span class="hidden md:inline text-xs tracking-widest">NEXT</span>
+          <i class="fa-solid fa-arrow-right text-lg"></i>
+        </span>
+      )}
+    </div>
+  </div>
+</div>

@@ -9,3 +9,6 @@ Thumbs.db
 
 # Local dev
 *.log
+node_modules/
+dist/
+.astro/

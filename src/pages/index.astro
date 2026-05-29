@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Mark • Illustrated">
+  <!-- Top Nav -->
+  <nav class="border-b border-white/10 bg-[#0a0a0f]/95 backdrop-blur-xl">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-x-3">
+        <div class="w-9 h-9 rounded-2xl bg-gradient-to-br from-[#5EEAD4] via-[#4BC4B0] to-[#5EEAD4] flex items-center justify-center shadow-lg shadow-[#5EEAD4]/20">
+          <i class="fa-solid fa-eye text-[#0a0a0f] text-xl"></i>
+        </div>
+        <div>
+          <div class="font-semibold text-3xl tracking-[-0.04em]">Mark</div>
+          <div class="text-[11px] text-[#a1a1aa] -mt-1">Illustrated</div>
+        </div>
+      </div>
+      <div class="text-sm text-[#a1a1aa]">
+        The Gospel of Mark • ESV Study Bible
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-6xl mx-auto px-6 pt-16 pb-20">
+    <div class="mb-12">
+      <h1 class="heading-serif text-6xl tracking-[-0.03em]">The Gospel of Mark</h1>
+      <p class="mt-3 text-xl text-[#c8c8d0]">An illustrated, contemplative reading experience</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Mark 12 Card -->
+      <a href="/mark-12" class="chapter-card group rounded-3xl p-8 block">
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="text-[#5EEAD4] text-sm font-semibold tracking-[2px]">CHAPTER 12</div>
+            <h2 class="heading-serif text-4xl mt-2 tracking-[-0.02em]">Questions in the Temple</h2>
+          </div>
+          <div class="text-6xl font-light text-[#5EEAD4]/30 group-hover:text-[#5EEAD4]/50 transition-colors">12</div>
+        </div>
+
+        <p class="mt-6 text-[#c8c8d0] leading-relaxed">
+          Jesus teaches in the Temple through the Parable of the Tenants, answers questions about taxes, resurrection, and the greatest commandment, and highlights true devotion through the widow’s offering.
+        </p>
+
+        <div class="mt-8 flex items-center text-[#5EEAD4] font-medium">
+          <span>Enter Chapter</span>
+          <i class="fa-solid fa-arrow-right ml-3 transition group-hover:translate-x-1"></i>
+        </div>
+      </a>
+
+      <!-- Mark 13 Card -->
+      <a href="/mark-13" class="chapter-card group rounded-3xl p-8 block">
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="text-[#5EEAD4] text-sm font-semibold tracking-[2px]">CHAPTER 13</div>
+            <h2 class="heading-serif text-4xl mt-2 tracking-[-0.02em]">The Olivet Discourse</h2>
+          </div>
+          <div class="text-6xl font-light text-[#5EEAD4]/30 group-hover:text-[#5EEAD4]/50 transition-colors">13</div>
+        </div>
+
+        <p class="mt-6 text-[#c8c8d0] leading-relaxed">
+          From the Mount of Olives, Jesus foretells the destruction of the Temple, warns of coming tribulation and deception, and calls his disciples to watchful endurance as he promises to return in glory.
+        </p>
+
+        <div class="mt-8 flex items-center text-[#5EEAD4] font-medium">
+          <span>Enter Chapter</span>
+          <i class="fa-solid fa-arrow-right ml-3 transition group-hover:translate-x-1"></i>
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-16 text-center text-sm text-[#666]">
+      More chapters coming soon • Designed for slow, beautiful reading
+    </div>
+  </div>
+</Layout>

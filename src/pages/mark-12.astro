@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ChapterNav from '../components/ChapterNav.astro';
+---
+
+<Layout title="VIGIL • Mark 12 — Questions in the Temple">
+  <ChapterNav 
+    current="MARK 12 — QUESTIONS IN THE TEMPLE"
+    next={{ href: "/mark-13", label: "MARK 13" }}
+  />
+
+  <div class="relative h-[520px] flex items-center justify-center overflow-hidden border-b border-white/10">
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#0a0a0f]/80 to-[#0a0a0f]"></div>
+    <div class="app-container px-6 relative z-10 text-center">
+      <h1 class="heading-serif text-6xl tracking-[-0.03em] leading-none mb-3">Questions in the Temple</h1>
+      <p class="max-w-lg mx-auto text-xl text-[#a1a1aa]">Jesus teaches with parables and wisdom in the final days before the cross.</p>
+    </div>
+  </div>
+
+  <div class="app-container px-6 py-20 text-center">
+    <p class="text-xl text-[#c8c8d0]">Mark 12 is being migrated to Astro.</p>
+    <p class="mt-4 text-[#a1a1aa]">The full experience with all sections and deep-dive modals will be available shortly.</p>
+    <a href="/" class="inline-block mt-8 text-[#5EEAD4] hover:underline">← Back to Homepage</a>
+  </div>
+</Layout>
