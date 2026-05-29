@@ -10,41 +10,67 @@ import { mark13Sections } from '../data/mark13';
     prev={{ href: "/mark-12", label: "MARK 12" }}
   />
 
-  <!-- Hero (matching original rich design) -->
+  <!-- Hero exactly matching the desired design -->
   <div class="relative h-[620px] flex items-center justify-center overflow-hidden border-b border-white/10">
     <div class="absolute inset-0">
-      <img src="/images/temple-foretold.jpg" alt="Jesus foretelling the destruction of the Temple" 
-           class="w-full h-full object-cover opacity-90">
-      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#0a0a0f]/70 to-[#0a0a0f]"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0f] via-transparent to-[#0a0a0f]/60"></div>
+      <img src="/images/temple-foretold.jpg" alt="The Olivet Discourse" 
+           class="w-full h-full object-cover" style="filter: brightness(0.65) contrast(1.1);">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
     </div>
 
-    <div class="app-container px-6 relative z-10 text-center">
-      <div class="inline-flex items-center gap-x-2 px-4 py-1 rounded-3xl bg-white/5 border border-white/10 mb-6">
-        <div class="w-2 h-2 bg-[#5EEAD4] rounded-full animate-pulse"></div>
-        <span class="text-xs tracking-[2px] font-semibold text-[#5EEAD4]">ESV STUDY BIBLE • MARK 13:1–37</span>
+    <div class="relative z-10 text-center px-6">
+      <div class="inline-flex items-center gap-x-2 px-4 py-1 rounded-full bg-black/40 border border-white/20 mb-6 text-sm">
+        <div class="w-2 h-2 bg-[#5EEAD4] rounded-full"></div>
+        <span class="tracking-[1.5px] text-[#5EEAD4]">ESV STUDY BIBLE • MARK 13:1–37</span>
       </div>
 
-      <h1 class="heading-serif text-7xl tracking-[-0.04em] leading-none mb-4">
+      <h1 class="heading-serif text-[72px] leading-[1.05] tracking-[-3px] text-white mb-3">
         The Olivet<br>Discourse
       </h1>
-      <p class="max-w-md mx-auto text-2xl text-[#a1a1aa] tracking-tight">Jesus and the Coming Judgment</p>
+      <p class="text-2xl text-[#c8c8d0] tracking-tight">Jesus and the Coming Judgment</p>
     </div>
   </div>
 
-  <!-- Overview -->
-  <div class="app-container px-6 py-8 border-b border-white/10">
-    <div class="max-w-3xl">
-      <span class="section-label text-[#5EEAD4]">THE HEART OF THE TEACHING</span>
-      <p class="mt-2 text-xl text-[#e5e5e7] leading-tight tracking-[-0.01em]">
-        Jesus’ discourse about the end times focuses the attention of the disciples on <span class="text-[#5EEAD4]">preparedness</span>, 
-        on <span class="text-[#5EEAD4]">readiness to suffer</span>, and on <span class="text-[#5EEAD4]">trust</span>.
-      </p>
+  <!-- CORE THEME bar -->
+  <div class="border-b border-white/10 bg-[#0a0a0f]">
+    <div class="max-w-6xl mx-auto px-6 py-6">
+      <div class="text-[#5EEAD4] text-sm tracking-widest font-medium">CORE THEME</div>
+      <div class="text-2xl text-white mt-1">Preparedness. Readiness to suffer. Trust.</div>
+    </div>
+  </div>
+
+  <!-- SUMMARY + CONTEXT cards -->
+  <div class="app-container px-6 pt-10 pb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- SUMMARY Card -->
+      <div class="glass rounded-3xl p-6">
+        <div class="flex items-center gap-x-3 mb-4">
+          <i class="fa-solid fa-align-left text-[#5EEAD4]"></i>
+          <span class="text-sm font-semibold tracking-widest text-[#5EEAD4]">SUMMARY</span>
+        </div>
+        <p class="text-[#c8c8d0] leading-relaxed">
+          Jesus leaves the Temple and prophesies its complete destruction, then from the Mount of Olives describes the coming tribulation, the abomination of desolation, and the return of the Son of Man in power and glory to gather the elect. He calls His disciples to remain watchful and to endure, anchoring their hope in the enduring authority of His words and the sovereign preservation of those the Father has chosen.
+        </p>
+      </div>
+
+      <!-- CONTEXT Card -->
+      <div class="glass rounded-3xl p-6">
+        <div class="flex items-center gap-x-3 mb-4">
+          <i class="fa-solid fa-globe text-[#6366f1]"></i>
+          <span class="text-sm font-semibold tracking-widest text-[#6366f1]">CONTEXT</span>
+        </div>
+        <div class="space-y-2 text-sm text-[#c8c8d0]">
+          <div><span class="font-medium text-white">Year:</span> c. A.D. 30 (Tuesday of Passion Week)</div>
+          <div><span class="font-medium text-white">Location:</span> Mount of Olives, overlooking the Temple in Jerusalem (Judea)</div>
+          <div><span class="font-medium text-white">People:</span> Jesus with the disciples, questioned privately by Peter, James, John & Andrew</div>
+          <div><span class="font-medium text-white">In Jesus’ Life:</span> Final days before the crucifixion; His longest recorded teaching on the end times and His return in glory.</div>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Sections Grid -->
-  <div class="app-container px-6 pt-10 pb-20">
+  <div class="app-container px-6 pt-4 pb-20">
     <div class="mb-8">
       <span class="section-label text-[#5EEAD4]">SIX MOVEMENTS</span>
     </div>
