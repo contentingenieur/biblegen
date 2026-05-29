@@ -98,7 +98,7 @@ import { mark13Sections } from '../data/mark13';
       </div>
 
       <div class="flex-1 overflow-y-auto">
-        <div id="modal-hero" class="relative h-[320px] w-full"></div>
+        <div id="modal-hero" class="relative h-[360px] w-full"></div>
 
         <div class="px-8 pt-8 pb-12 grid md:grid-cols-12 gap-x-8 gap-y-8">
           <div class="md:col-span-7">
@@ -124,6 +124,14 @@ import { mark13Sections } from '../data/mark13';
                 <span class="section-label tracking-[1.5px]">FROM THE ESV COMMENTARY</span>
               </div>
               <div id="modal-key-truths" class="space-y-2"></div>
+            </div>
+          </div>
+
+          <!-- Reflection -->
+          <div class="md:col-span-12 mt-4 pt-6 border-t border-white/10">
+            <div class="glass p-6 rounded-3xl">
+              <div class="uppercase text-xs tracking-widest mb-2 text-[#34d3c1]">FOR MEDITATION</div>
+              <div id="modal-reflection" class="text-lg text-[#e5e5e7]"></div>
             </div>
           </div>
         </div>
@@ -177,6 +185,9 @@ import { mark13Sections } from '../data/mark13';
           </div>
         `).join('');
         document.getElementById('modal-key-truths').innerHTML = truthsHtml;
+
+        // Reflection
+        document.getElementById('modal-reflection').innerHTML = section.reflection || '';
 
         modal.classList.remove('hidden');
         modal.classList.add('flex');
