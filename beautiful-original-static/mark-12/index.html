@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIGIL • Mark 12 — Questions in the Temple</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap">
+  <style>
+    :root { --teal: #5EEAD4; }
+    body {
+      background-color: #0a0a0f;
+      color: #f5f5f7;
+      font-family: 'Inter', system_ui, sans-serif;
+    }
+    .heading-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .app-container { max-width: 1280px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600;
+    }
+    .glass {
+      background: rgba(26, 26, 34, 0.8);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(94, 234, 212, 0.1);
+    }
+    .section-card {
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      background: linear-gradient(145deg, #121217 0%, #1a1a22 100%);
+      border: 1px solid rgba(94, 234, 212, 0.08);
+      overflow: hidden;
+    }
+    .section-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(94, 234, 212, 0.25);
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+    }
+    .section-card img {
+      transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .section-card:hover img { transform: scale(1.06); }
+    .modal { animation: modalEnter 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+    @keyframes modalEnter {
+      from { opacity: 0; transform: translateY(40px) scale(0.985); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .scripture-text { font-size: 1.02rem; line-height: 1.75; }
+    .verse-num { color: #5EEAD4; font-weight: 600; font-size: 0.75rem; vertical-align: super; margin-right: 4px; }
+    .commentary-block {
+      border-left: 3px solid #5EEAD4;
+      background: rgba(94, 234, 212, 0.035);
+    }
+    .key-truth {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .key-truth:hover { transform: translateX(4px); }
+    .section-card .absolute.inset-0 {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.8) 100%) !important;
+    }
+    .section-card .absolute.top-4.left-4 {
+      background: rgba(10,10,15,0.75) !important;
+      color: #5EEAD4 !important;
+      border: 1px solid rgba(94,234,212,0.4) !important;
+    }
+    .section-card .absolute.top-4.left-\[52px\] > div {
+      background: rgba(94,234,212,0.13) !important;
+      color: #5EEAD4 !important;
+      border: 1px solid rgba(94,234,212,0.22) !important;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Chapter Nav -->
+  <div class="border-b border-white/10 bg-[#0a0a0f]">
+    <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between text-sm">
+      <div class="flex items-center gap-x-4">
+        <a href="../index.html" class="flex items-center gap-x-2 text-[#a1a1aa] hover:text-white transition-colors" title="Home">
+          <i class="fa-solid fa-home text-base"></i>
+        </a>
+        <span class="flex items-center gap-x-2 text-[#555]">
+          <i class="fa-solid fa-arrow-left text-lg"></i>
+          <span class="hidden md:inline text-xs tracking-widest">PREV</span>
+        </span>
+      </div>
+      <div class="font-medium text-[#5EEAD4] tracking-[1px] text-sm">MARK 12 — QUESTIONS IN THE TEMPLE</div>
+      <div>
+        <a href="../mark-13/index.html" class="flex items-center gap-x-2 text-[#a1a1aa] hover:text-[#5EEAD4] transition-colors">
+          <span class="hidden md:inline text-xs tracking-widest">MARK 13</span>
+          <i class="fa-solid fa-arrow-right text-lg"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="relative h-[620px] flex items-center justify-center overflow-hidden border-b border-white/10">
+    <div class="absolute inset-0">
+      <img src="../assets/images/temple-foretold.jpg" alt="Questions in the Temple" 
+           class="w-full h-full object-cover" style="filter: brightness(0.48) contrast(1.3) saturate(0.85);">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/35 to-black/88"></div>
+    </div>
+    <div class="relative z-10 text-center px-6">
+      <div class="inline-flex items-center gap-x-2 px-4 py-1 rounded-full bg-black/40 border border-white/20 mb-6 text-sm">
+        <div class="w-2 h-2 bg-[#5EEAD4] rounded-full"></div>
+        <span class="tracking-[1.5px] text-[#5EEAD4]">ESV STUDY BIBLE • MARK 12:1–44</span>
+      </div>
+      <h1 class="heading-serif text-[72px] leading-[1.05] tracking-[-3px] text-white mb-3">
+        Questions in<br>the Temple
+      </h1>
+      <p class="text-2xl text-[#c8c8d0] tracking-tight">Christ's Authority and the Heart of True Devotion</p>
+    </div>
+  </div>
+
+  <!-- CORE THEME -->
+  <div class="border-b border-white/10 bg-[#0a0a0f]">
+    <div class="max-w-6xl mx-auto px-6 py-6">
+      <div class="text-[#5EEAD4] text-sm tracking-widest font-medium">CORE THEME</div>
+      <div class="text-2xl text-white mt-1">Christ's authority. Fruitfulness. Wholehearted love. True devotion over hypocrisy.</div>
+    </div>
+  </div>
+
+  <!-- SUMMARY + CONTEXT -->
+  <div class="app-container px-6 pt-10 pb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="glass rounded-3xl p-6">
+        <div class="flex items-center gap-x-3 mb-4">
+          <i class="fa-solid fa-align-left text-[#5EEAD4]"></i>
+          <span class="text-sm font-semibold tracking-widest text-[#5EEAD4]">SUMMARY</span>
+        </div>
+        <p class="text-[#c8c8d0] leading-relaxed">
+          In the Temple courts during the final days before the cross, Jesus tells the Parable of the Tenants exposing the leaders' rejection of the beloved Son, masterfully answers traps about taxes and the resurrection, declares the two greatest commandments, reveals Himself as David's Lord, and holds up a poor widow's sacrificial giving as the model of true devotion that shames religious hypocrisy.
+        </p>
+      </div>
+      <div class="glass rounded-3xl p-6">
+        <div class="flex items-center gap-x-3 mb-4">
+          <i class="fa-solid fa-globe text-[#6366f1]"></i>
+          <span class="text-sm font-semibold tracking-widest text-[#6366f1]">CONTEXT</span>
+        </div>
+        <div class="space-y-2 text-sm text-[#c8c8d0]">
+          <div><span class="font-medium text-white">Year:</span> c. A.D. 30 (Tuesday of Passion Week)</div>
+          <div><span class="font-medium text-white">Location:</span> The Temple courts in Jerusalem (Judea)</div>
+          <div><span class="font-medium text-white">People:</span> Jesus, the chief priests, scribes, Pharisees, Herodians, Sadducees, a sincere scribe, and a poor widow</div>
+          <div><span class="font-medium text-white">In Jesus’ Life:</span> The last week before the crucifixion; a day of intense public confrontation and authoritative teaching that seals the religious leaders' determination to kill Him.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIX MOVEMENTS -->
+  <div class="app-container px-6 pt-4 pb-20">
+    <div class="mb-8">
+      <span class="section-label text-[#5EEAD4]">SIX MOVEMENTS</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <div class="section-card group rounded-3xl overflow-hidden flex flex-col cursor-pointer h-full" data-section-id="1">
+        <div class="relative h-44 overflow-hidden">
+          <img src="../assets/images/temple-foretold.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]" />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+          <div class="absolute top-4 left-4 z-10 w-8 h-8 rounded-2xl flex items-center justify-center text-sm font-mono font-semibold" style="background: rgba(10,10,15,0.75); color: #5EEAD4; border: 1px solid #5EEAD440">1</div>
+          <div class="absolute top-4 left-[52px]">
+            <div class="px-3 py-1 rounded-2xl text-[10px] font-bold tracking-[1.5px] flex items-center gap-x-1.5" style="background: rgba(94,234,212,0.13); color: #5EEAD4; border: 1px solid rgba(94,234,212,0.22)">
+              <i class="fa-solid fa-seedling text-xs"></i>
+              <span>THE TENANTS</span>
+            </div>
+          </div>
+          <div class="absolute bottom-4 right-4 text-right">
+            <div class="font-mono text-xs text-white/60">12:1–12</div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl tracking-[-0.02em] leading-none mb-2.5 pr-2">The Parable of the Tenants</h3>
+          <p class="text-[#a1a1aa] text-[13.5px] flex-1 leading-snug">Jesus tells the story of a vineyard owner who sends servants — and finally his beloved son — to receive fruit from wicked tenants who beat, shame, and kill them.</p>
+          <div class="mt-4 flex justify-end text-sm">
+            <div class="text-[#5EEAD4] group-hover:translate-x-0.5 transition-transform">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="section-card group rounded-3xl overflow-hidden flex flex-col cursor-pointer h-full" data-section-id="2">
+        <div class="relative h-44 overflow-hidden">
+          <img src="../assets/images/persecution-witness.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]" />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+          <div class="absolute top-4 left-4 z-10 w-8 h-8 rounded-2xl flex items-center justify-center text-sm font-mono font-semibold" style="background: rgba(10,10,15,0.75); color: #5EEAD4; border: 1px solid #5EEAD440">2</div>
+          <div class="absolute top-4 left-[52px]">
+            <div class="px-3 py-1 rounded-2xl text-[10px] font-bold tracking-[1.5px] flex items-center gap-x-1.5" style="background: rgba(94,234,212,0.13); color: #5EEAD4; border: 1px solid rgba(94,234,212,0.22)">
+              <i class="fa-solid fa-coins text-xs"></i>
+              <span>TAXES TO CAESAR</span>
+            </div>
+          </div>
+          <div class="absolute bottom-4 right-4 text-right">
+            <div class="font-mono text-xs text-white/60">12:13–17</div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl tracking-[-0.02em] leading-none mb-2.5 pr-2">Paying Taxes to Caesar</h3>
+          <p class="text-[#a1a1aa] text-[13.5px] flex-1 leading-snug">The Pharisees and Herodians try to trap Jesus with a question about paying taxes to Caesar. Jesus exposes their hypocrisy and delivers a profound answer about allegiance.</p>
+          <div class="mt-4 flex justify-end text-sm">
+            <div class="text-[#5EEAD4] group-hover:translate-x-0.5 transition-transform">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="section-card group rounded-3xl overflow-hidden flex flex-col cursor-pointer h-full" data-section-id="3">
+        <div class="relative h-44 overflow-hidden">
+          <img src="../assets/images/son-of-man-coming.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]" />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+          <div class="absolute top-4 left-4 z-10 w-8 h-8 rounded-2xl flex items-center justify-center text-sm font-mono font-semibold" style="background: rgba(10,10,15,0.75); color: #5EEAD4; border: 1px solid #5EEAD440">3</div>
+          <div class="absolute top-4 left-[52px]">
+            <div class="px-3 py-1 rounded-2xl text-[10px] font-bold tracking-[1.5px] flex items-center gap-x-1.5" style="background: rgba(94,234,212,0.13); color: #5EEAD4; border: 1px solid rgba(94,234,212,0.22)">
+              <i class="fa-solid fa-book-open text-xs"></i>
+              <span>THE RESURRECTION</span>
+            </div>
+          </div>
+          <div class="absolute bottom-4 right-4 text-right">
+            <div class="font-mono text-xs text-white/60">12:18–27</div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl tracking-[-0.02em] leading-none mb-2.5 pr-2">The Sadducees and the Resurrection</h3>
+          <p class="text-[#a1a1aa] text-[13.5px] flex-1 leading-snug">The Sadducees present a hypothetical scenario of seven brothers and one widow to mock the idea of resurrection. Jesus corrects both their understanding of Scripture and the power of God.</p>
+          <div class="mt-4 flex justify-end text-sm">
+            <div class="text-[#5EEAD4] group-hover:translate-x-0.5 transition-transform">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="section-card group rounded-3xl overflow-hidden flex flex-col cursor-pointer h-full" data-section-id="4">
+        <div class="relative h-44 overflow-hidden">
+          <img src="../assets/images/watchful-servant.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]" />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+          <div class="absolute top-4 left-4 z-10 w-8 h-8 rounded-2xl flex items-center justify-center text-sm font-mono font-semibold" style="background: rgba(10,10,15,0.75); color: #5EEAD4; border: 1px solid #5EEAD440">4</div>
+          <div class="absolute top-4 left-[52px]">
+            <div class="px-3 py-1 rounded-2xl text-[10px] font-bold tracking-[1.5px] flex items-center gap-x-1.5" style="background: rgba(94,234,212,0.13); color: #5EEAD4; border: 1px solid rgba(94,234,212,0.22)">
+              <i class="fa-solid fa-heart text-xs"></i>
+              <span>THE GREAT COMMANDMENT</span>
+            </div>
+          </div>
+          <div class="absolute bottom-4 right-4 text-right">
+            <div class="font-mono text-xs text-white/60">12:28–34</div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl tracking-[-0.02em] leading-none mb-2.5 pr-2">The Great Commandment</h3>
+          <p class="text-[#a1a1aa] text-[13.5px] flex-1 leading-snug">A sincere scribe asks which commandment is most important. Jesus answers with the Shema and the command to love one’s neighbor, and declares the scribe not far from the kingdom of God.</p>
+          <div class="mt-4 flex justify-end text-sm">
+            <div class="text-[#5EEAD4] group-hover:translate-x-0.5 transition-transform">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="section-card group rounded-3xl overflow-hidden flex flex-col cursor-pointer h-full" data-section-id="5">
+        <div class="relative h-44 overflow-hidden">
+          <img src="../assets/images/son-of-man-coming.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]" />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+          <div class="absolute top-4 left-4 z-10 w-8 h-8 rounded-2xl flex items-center justify-center text-sm font-mono font-semibold" style="background: rgba(10,10,15,0.75); color: #5EEAD4; border: 1px solid #5EEAD440">5</div>
+          <div class="absolute top-4 left-[52px]">
+            <div class="px-3 py-1 rounded-2xl text-[10px] font-bold tracking-[1.5px] flex items-center gap-x-1.5" style="background: rgba(94,234,212,0.13); color: #5EEAD4; border: 1px solid rgba(94,234,212,0.22)">
+              <i class="fa-solid fa-crown text-xs"></i>
+              <span>WHOSE SON?</span>
+            </div>
+          </div>
+          <div class="absolute bottom-4 right-4 text-right">
+            <div class="font-mono text-xs text-white/60">12:35–37</div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl tracking-[-0.02em] leading-none mb-2.5 pr-2">Whose Son Is the Christ?</h3>
+          <p class="text-[#a1a1aa] text-[13.5px] flex-1 leading-snug">Jesus challenges the popular view that the Messiah is merely the son of David by pointing to Psalm 110, where David calls the Messiah “Lord.” The crowd listens with delight.</p>
+          <div class="mt-4 flex justify-end text-sm">
+            <div class="text-[#5EEAD4] group-hover:translate-x-0.5 transition-transform">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="section-card group rounded-3xl overflow-hidden flex flex-col cursor-pointer h-full" data-section-id="6">
+        <div class="relative h-44 overflow-hidden">
+          <img src="../assets/images/fig-tree.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]" />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+          <div class="absolute top-4 left-4 z-10 w-8 h-8 rounded-2xl flex items-center justify-center text-sm font-mono font-semibold" style="background: rgba(10,10,15,0.75); color: #5EEAD4; border: 1px solid #5EEAD440">6</div>
+          <div class="absolute top-4 left-[52px]">
+            <div class="px-3 py-1 rounded-2xl text-[10px] font-bold tracking-[1.5px] flex items-center gap-x-1.5" style="background: rgba(94,234,212,0.13); color: #5EEAD4; border: 1px solid rgba(94,234,212,0.22)">
+              <i class="fa-solid fa-hand-holding-heart text-xs"></i>
+              <span>TRUE DEVOTION</span>
+            </div>
+          </div>
+          <div class="absolute bottom-4 right-4 text-right">
+            <div class="font-mono text-xs text-white/60">12:38–44</div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl tracking-[-0.02em] leading-none mb-2.5 pr-2">Beware of the Scribes &amp; The Widow’s Offering</h3>
+          <p class="text-[#a1a1aa] text-[13.5px] flex-1 leading-snug">Jesus warns against the pride and exploitation of the scribes, then watches a poor widow give two small coins — and declares that she has given more than all the rich.</p>
+          <div class="mt-4 flex justify-end text-sm">
+            <div class="text-[#5EEAD4] group-hover:translate-x-0.5 transition-transform">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="deep-dive-modal" class="hidden fixed inset-0 bg-black/90 backdrop-blur-md z-[70] flex items-center justify-center p-4 md:p-8">
+    <div class="modal w-full max-w-[1100px] bg-[#121217] border border-white/10 rounded-3xl overflow-hidden shadow-2xl max-h-[94vh] flex flex-col">
+      <div class="px-8 pt-7 pb-6 flex items-center justify-between border-b border-white/10 flex-shrink-0">
+        <div id="modal-header" class="flex items-center gap-x-4"></div>
+        <button onclick="closeModal()" class="text-3xl leading-none text-white/40 hover:text-white transition-colors w-9 h-9 flex items-center justify-center">&times;</button>
+      </div>
+      <div class="flex-1 overflow-y-auto">
+        <div id="modal-hero" class="relative h-[360px] w-full"></div>
+        <div class="px-8 pt-8 pb-12 grid md:grid-cols-12 gap-x-8 gap-y-8">
+          <div class="md:col-span-7">
+            <div class="flex items-center gap-x-3 mb-4">
+              <i class="fa-solid fa-book-open text-[#5EEAD4]"></i>
+              <span class="section-label tracking-[1.5px]">THE TEXT</span>
+            </div>
+            <div id="modal-scripture" class="scripture-text text-[#e5e5e7] leading-relaxed pr-1"></div>
+          </div>
+          <div class="md:col-span-5 space-y-8">
+            <div>
+              <div class="flex items-center gap-x-3 mb-4">
+                <i class="fa-solid fa-pen-fancy text-[#6366f1]"></i>
+                <span class="section-label tracking-[1.5px]">STUDY COMMENTARY</span>
+              </div>
+              <div id="modal-commentary" class="commentary-block p-5 text-[15px] leading-snug text-[#c8c8d0] rounded-r-2xl"></div>
+            </div>
+            <div>
+              <div class="flex items-center gap-x-3 mb-4">
+                <i class="fa-solid fa-book text-[#34d3c1]"></i>
+                <span class="section-label tracking-[1.5px]">FROM THE ESV COMMENTARY</span>
+              </div>
+              <div id="modal-key-truths" class="space-y-2"></div>
+            </div>
+          </div>
+          <div class="md:col-span-12 mt-4 pt-6 border-t border-white/10">
+            <div class="glass p-6 rounded-3xl">
+              <div class="uppercase text-xs tracking-widest mb-2 text-[#34d3c1]">FOR MEDITATION</div>
+              <div id="modal-reflection" class="text-lg text-[#e5e5e7]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const sections = [
+      { id: 1, label: "THE TENANTS", title: "The Parable of the Tenants", verseRange: "12:1–12", color: "#5EEAD4", icon: "fa-solid fa-seedling", image: "../assets/images/temple-foretold.jpg",
+        scripture: `<p><span class="verse-num">1</span> And he began to speak to them in parables. “A man planted a vineyard and put a fence around it and dug a pit for the winepress and built a tower, and leased it to tenants and went into another country. <span class="verse-num">2</span> When the season came, he sent a servant to the tenants to get from them some of the fruit of the vineyard. <span class="verse-num">3</span> And they took him and beat him and sent him away empty-handed. <span class="verse-num">4</span> Again he sent to them another servant, and they struck him on the head and treated him shamefully. <span class="verse-num">5</span> And he sent another, and him they killed. And so with many others: some they beat, and some they killed.</p><p class="mt-4"><span class="verse-num">6</span> He had still one other, a beloved son. Finally he sent him to them, saying, ‘They will respect my son.’ <span class="verse-num">7</span> But those tenants said to one another, ‘This is the heir. Come, let us kill him, and the inheritance will be ours.’ <span class="verse-num">8</span> And they took him and killed him and threw him out of the vineyard. <span class="verse-num">9</span> What will the owner of the vineyard do? He will come and destroy the tenants and give the vineyard to others.”</p>`,
+        commentary: "The parable alludes to Isaiah 5. The tenants represent the leaders of Israel who have repeatedly rejected God’s servants (the prophets) and now plot to kill the beloved Son. God will judge the unfaithful leaders and give the vineyard to others — a new people who will bear fruit.",
+        keyTruths: ["God has a rightful expectation of fruit from his people.", "The leaders of Israel have repeatedly rejected and mistreated God’s messengers.", "The beloved Son has been sent — and will be killed. God will give the vineyard to others."],
+        reflection: "Where in my life am I treating the Son as an interruption rather than the rightful heir? Am I producing fruit for the Owner of the vineyard?" },
+      { id: 2, label: "TAXES TO CAESAR", title: "Paying Taxes to Caesar", verseRange: "12:13–17", color: "#5EEAD4", icon: "fa-solid fa-coins", image: "../assets/images/persecution-witness.jpg",
+        scripture: `<p><span class="verse-num">13</span> And they sent to him some of the Pharisees and some of the Herodians, to trap him in his talk. <span class="verse-num">14</span> And they came and said to him, “Teacher, we know that you are true and do not care about anyone’s opinion. For you are not swayed by appearances, but truly teach the way of God. Is it lawful to pay taxes to Caesar, or not? Should we pay them, or should we not?”</p><p class="mt-4"><span class="verse-num">15</span> But, knowing their hypocrisy, he said to them, “Why put me to the test? Bring me a denarius and let me look at it.” <span class="verse-num">16</span> And they brought one. And he said to them, “Whose likeness and inscription is this?” They said to him, “Caesar’s.” <span class="verse-num">17</span> Jesus said to them, “Render to Caesar the things that are Caesar’s, and to God the things that are God’s.” And they marveled at him.</p>`,
+        commentary: "Jesus refuses to be trapped. By asking for a denarius, he shows that his opponents already participate in the Roman system. His answer affirms civic responsibility while making clear that God’s claim on our lives is total and ultimate.",
+        keyTruths: ["God’s kingdom transcends all earthly powers and systems.", "Jesus is not a political revolutionary, but his lordship relativizes every human authority.", "We are to give Caesar what belongs to him — and give God everything."],
+        reflection: "What am I currently withholding from God because I’m trying to keep it for myself or for Caesar? What does it look like to render to God the things that are God’s?" },
+      { id: 3, label: "THE RESURRECTION", title: "The Sadducees and the Resurrection", verseRange: "12:18–27", color: "#5EEAD4", icon: "fa-solid fa-book-open", image: "../assets/images/son-of-man-coming.jpg",
+        scripture: `<p><span class="verse-num">24</span> Jesus said to them, “Is this not the reason you are wrong, because you know neither the Scriptures nor the power of God? <span class="verse-num">25</span> For when they rise from the dead, they neither marry nor are given in marriage, but are like angels in heaven. <span class="verse-num">26</span> And as for the dead being raised, have you not read in the book of Moses, in the passage about the bush, how God spoke to him, saying, ‘I am the God of Abraham, and the God of Isaac, and the God of Jacob’? <span class="verse-num">27</span> He is not God of the dead, but of the living. You are quite wrong.”</p>`,
+        commentary: "The Sadducees know neither the Scriptures nor the power of God. Exodus 3:6 reveals that God is still the God of Abraham, Isaac, and Jacob — therefore they live. The resurrection is not a continuation of earthly life but a transformation into something greater.",
+        keyTruths: ["God is the God of the living. Abraham, Isaac, and Jacob are alive to him.", "Heavenly existence is not a continuation of earthly marriage and social structures.", "The power of God is greater than our limited imaginations."],
+        reflection: "Do I live as though God is only the God of the dead, or as the God of the living who will raise me? How does the resurrection change the way I hold earthly relationships and possessions?" },
+      { id: 4, label: "THE GREAT COMMANDMENT", title: "The Great Commandment", verseRange: "12:28–34", color: "#5EEAD4", icon: "fa-solid fa-heart", image: "../assets/images/watchful-servant.jpg",
+        scripture: `<p><span class="verse-num">29</span> Jesus answered, “The most important is, ‘Hear, O Israel: The Lord our God, the Lord is one. <span class="verse-num">30</span> And you shall love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength.’ <span class="verse-num">31</span> The second is this: ‘You shall love the neighbor as yourself.’ There is no other commandment greater than these.”</p><p class="mt-4"><span class="verse-num">34</span> And when Jesus saw that he answered wisely, he said to him, “You are not far from the kingdom of God.”</p>`,
+        commentary: "Jesus sums up the entire law in two commandments: total love for God and genuine love for neighbor. The scribe’s wise response shows he is close — but still needs to recognize Jesus as the beloved Son and the one who will give his life as a ransom.",
+        keyTruths: ["Love for God with everything we are is the first and greatest commandment.", "Love for neighbor flows directly from love for God.", "Intellectual agreement is not enough — we need the Son."],
+        reflection: "Am I trying to love God and neighbor out of my own strength, or am I being transformed by the love of the One who gave everything for me?" },
+      { id: 5, label: "WHOSE SON?", title: "Whose Son Is the Christ?", verseRange: "12:35–37", color: "#5EEAD4", icon: "fa-solid fa-crown", image: "../assets/images/son-of-man-coming.jpg",
+        scripture: `<p><span class="verse-num">35</span> And as Jesus taught in the temple, he said, “How can the scribes say that the Christ is the son of David? <span class="verse-num">36</span> David himself, in the Holy Spirit, declared, ‘The Lord said to my Lord, “Sit at my right hand, until I put your enemies under your feet.”’ <span class="verse-num">37</span> David himself calls him Lord. So how is he his son?” And the great throng heard him gladly.</p>`,
+        commentary: "Jesus is not denying his Davidic descent. He is showing that the Messiah is far more than a political son of David. As the Lord of David, he sits at the right hand of God and will defeat all his enemies. This is a clear claim to divine authority.",
+        keyTruths: ["The Messiah is not merely a human king in David’s line.", "Jesus claims to be the Lord to whom even David submits.", "His exaltation at the right hand of God is central to his identity and mission."],
+        reflection: "Do I relate to Jesus primarily as a good teacher or moral example, or as the Lord of David who reigns at God’s right hand?" },
+      { id: 6, label: "TRUE DEVOTION", title: "Beware of the Scribes & The Widow’s Offering", verseRange: "12:38–44", color: "#5EEAD4", icon: "fa-solid fa-hand-holding-heart", image: "../assets/images/fig-tree.jpg",
+        scripture: `<p><span class="verse-num">38</span> And in his teaching he said, “Beware of the scribes, who like to walk around in long robes and like greetings in the marketplaces and have the best seats in the synagogues and the places of honor at feasts, <span class="verse-num">40</span> who devour widows’ houses and for a pretense make long prayers. They will receive the greater condemnation.”</p><p class="mt-4"><span class="verse-num">43</span> And he called his disciples to him and said to them, “Truly, I say to you, this poor widow has put in more than all those who are contributing to the offering box. <span class="verse-num">44</span> For they all contributed out of their abundance, but she out of her poverty has put in everything she had, all she had to live on.”</p>`,
+        commentary: "True devotion is not measured by outward appearance or public recognition. The widow gave everything she had to live on. God measures generosity by sacrifice and the heart, not by the amount given from surplus.",
+        keyTruths: ["God sees and judges religious hypocrisy that exploits the vulnerable.", "True giving is measured by what it costs the giver.", "The kingdom values the heart and sacrifice over public display."],
+        reflection: "What am I giving to God that costs me little? What would it look like to give “everything I have to live on” in some area of my life?" }
+    ];
+
+    const modal = document.getElementById('deep-dive-modal');
+    const cards = document.querySelectorAll('[data-section-id]');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const id = parseInt(card.dataset.sectionId);
+        const section = sections.find(s => s.id === id);
+        if (!section) return;
+
+        document.getElementById('modal-header').innerHTML = `
+          <div style="color: ${section.color}" class="text-4xl"><i class="${section.icon}"></i></div>
+          <div>
+            <div class="uppercase tracking-[2px] text-xs font-semibold" style="color: ${section.color}">${section.label}</div>
+            <div class="text-3xl font-semibold tracking-[-0.02em] mt-px">${section.title}</div>
+            <div class="font-mono text-xs mt-1 text-[#a1a1aa]">${section.verseRange}</div>
+          </div>
+        `;
+
+        document.getElementById('modal-hero').innerHTML = `
+          <div class="relative h-full w-full">
+            <img src="${section.image}" alt="${section.title}" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#121217]/70 to-[#121217]"></div>
+          </div>
+        `;
+
+        document.getElementById('modal-scripture').innerHTML = section.scripture;
+        document.getElementById('modal-commentary').innerHTML = `<p>${section.commentary}</p>`;
+
+        const truthsHtml = section.keyTruths.map(t => `
+          <div class="flex items-start gap-3 p-3 bg-[#1a1a22] hover:bg-[#202028] rounded-2xl border border-white/5">
+            <div class="mt-1 w-5 h-5 flex-shrink-0 rounded-xl flex items-center justify-center" style="background: #5EEAD422">
+              <i class="fa-solid fa-check text-xs" style="color: #5EEAD4"></i>
+            </div>
+            <div class="text-sm leading-tight text-[#c8c8d0]">${t}</div>
+          </div>
+        `).join('');
+        document.getElementById('modal-key-truths').innerHTML = truthsHtml;
+
+        document.getElementById('modal-reflection').innerHTML = section.reflection || '';
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+    });
+
+    window.closeModal = () => {
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    };
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        window.closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
