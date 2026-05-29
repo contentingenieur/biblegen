@@ -69,56 +69,174 @@ import { mark13Sections } from '../data/mark13';
     </div>
   </div>
 
-  <!-- Sections Grid -->
+  <!-- Sections Grid - Exact match to your reference image -->
   <div class="app-container px-6 pt-4 pb-20">
     <div class="mb-8">
       <span class="section-label text-[#5EEAD4]">SIX MOVEMENTS</span>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-      {mark13Sections.map((section, index) => (
-        <div 
-          class="section-card group rounded-3xl overflow-hidden flex flex-col cursor-pointer h-full"
-          data-section-id={section.id}
-        >
-          <div class="relative h-44 overflow-hidden">
-            <img 
-              src={section.image} 
-              alt={section.title} 
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
-            />
-            <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
-            
-            <div class="absolute top-4 left-4 z-10 w-8 h-8 rounded-2xl flex items-center justify-center text-sm font-mono font-semibold"
-                 style={`background: rgba(10,10,15,0.75); color: ${section.color}; border: 1px solid ${section.color}40`}>
-              {index + 1}
-            </div>
-
-            <div class="absolute top-4 left-[52px]">
-              <div class="px-3 py-1 rounded-2xl text-[10px] font-bold tracking-[1.5px] flex items-center gap-x-1.5"
-                   style={`background: rgba(94,234,212,0.13); color: #5EEAD4; border: 1px solid rgba(94,234,212,0.22)`}>
-                <i class={section.icon + " text-xs"}></i>
-                <span>{section.label}</span>
-              </div>
-            </div>
-
-            <div class="absolute bottom-4 right-4 text-right">
-              <div class="font-mono text-xs text-white/60">{section.verseRange}</div>
+      <!-- Card 1 -->
+      <div class="section-card group rounded-3xl overflow-hidden flex flex-col cursor-pointer h-full" data-section-id="1">
+        <div class="relative h-44 overflow-hidden">
+          <img src="/images/temple-foretold.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]" />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+          <div class="absolute top-4 left-4 z-10 w-8 h-8 rounded-2xl flex items-center justify-center text-sm font-mono font-semibold" style="background: rgba(10,10,15,0.75); color: #5EEAD4; border: 1px solid #5EEAD440">1</div>
+          <div class="absolute top-4 left-[52px]">
+            <div class="px-3 py-1 rounded-2xl text-[10px] font-bold tracking-[1.5px] flex items-center gap-x-1.5" style="background: rgba(94,234,212,0.13); color: #5EEAD4; border: 1px solid rgba(94,234,212,0.22)">
+              <i class="fa-solid fa-landmark text-xs"></i>
+              <span>THE TEMPLE FORETOLD</span>
             </div>
           </div>
-
-          <div class="p-5 flex-1 flex flex-col">
-            <h3 class="font-semibold text-xl tracking-[-0.02em] leading-none mb-2.5 pr-2">{section.title}</h3>
-            <p class="text-[#a1a1aa] text-[13.5px] flex-1 leading-snug">{section.summary}</p>
-            
-            <div class="mt-4 flex justify-end text-sm">
-              <div class="text-[#5EEAD4] group-hover:translate-x-0.5 transition-transform">
-                <i class="fa-solid fa-arrow-right"></i>
-              </div>
+          <div class="absolute bottom-4 right-4 text-right">
+            <div class="font-mono text-xs text-white/60">13:1–2</div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl tracking-[-0.02em] leading-none mb-2.5 pr-2">Jesus Foretells the Destruction of the Temple</h3>
+          <p class="text-[#a1a1aa] text-[13.5px] flex-1 leading-snug">As Jesus leaves the magnificent Temple, a disciple marvels at its stones. Jesus responds with a shocking prophecy.</p>
+          <div class="mt-4 flex justify-end text-sm">
+            <div class="text-[#5EEAD4] group-hover:translate-x-0.5 transition-transform">
+              <i class="fa-solid fa-arrow-right"></i>
             </div>
           </div>
         </div>
-      ))}
+      </div>
+
+      <!-- Card 2 -->
+      <div class="section-card group rounded-3xl overflow-hidden flex flex-col cursor-pointer h-full" data-section-id="2">
+        <div class="relative h-44 overflow-hidden">
+          <img src="/images/mount-of-olives.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]" />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+          <div class="absolute top-4 left-4 z-10 w-8 h-8 rounded-2xl flex items-center justify-center text-sm font-mono font-semibold" style="background: rgba(10,10,15,0.75); color: #5EEAD4; border: 1px solid #5EEAD440">2</div>
+          <div class="absolute top-4 left-[52px]">
+            <div class="px-3 py-1 rounded-2xl text-[10px] font-bold tracking-[1.5px] flex items-center gap-x-1.5" style="background: rgba(94,234,212,0.13); color: #5EEAD4; border: 1px solid rgba(94,234,212,0.22)">
+              <i class="fa-solid fa-question-circle text-xs"></i>
+              <span>THE QUESTION</span>
+            </div>
+          </div>
+          <div class="absolute bottom-4 right-4 text-right">
+            <div class="font-mono text-xs text-white/60">13:3–4</div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl tracking-[-0.02em] leading-none mb-2.5 pr-2">The Disciples Ask About the End</h3>
+          <p class="text-[#a1a1aa] text-[13.5px] flex-1 leading-snug">On the Mount of Olives, with the Temple in view, Peter, James, John, and Andrew privately ask Jesus when these things will happen.</p>
+          <div class="mt-4 flex justify-end text-sm">
+            <div class="text-[#5EEAD4] group-hover:translate-x-0.5 transition-transform">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="section-card group rounded-3xl overflow-hidden flex flex-col cursor-pointer h-full" data-section-id="3">
+        <div class="relative h-44 overflow-hidden">
+          <img src="/images/persecution-witness.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]" />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+          <div class="absolute top-4 left-4 z-10 w-8 h-8 rounded-2xl flex items-center justify-center text-sm font-mono font-semibold" style="background: rgba(10,10,15,0.75); color: #5EEAD4; border: 1px solid #5EEAD440">3</div>
+          <div class="absolute top-4 left-[52px]">
+            <div class="px-3 py-1 rounded-2xl text-[10px] font-bold tracking-[1.5px] flex items-center gap-x-1.5" style="background: rgba(94,234,212,0.13); color: #5EEAD4; border: 1px solid rgba(94,234,212,0.22)">
+              <i class="fa-solid fa-fire text-xs"></i>
+              <span>BIRTH PAINS &amp; PERSECUTION</span>
+            </div>
+          </div>
+          <div class="absolute bottom-4 right-4 text-right">
+            <div class="font-mono text-xs text-white/60">13:5–13</div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl tracking-[-0.02em] leading-none mb-2.5 pr-2">Signs, Birth Pains &amp; Faithful Witness</h3>
+          <p class="text-[#a1a1aa] text-[13.5px] flex-1 leading-snug">Jesus warns against being led astray, describes wars, earthquakes, and famines as the beginning of the birth pains.</p>
+          <div class="mt-4 flex justify-end text-sm">
+            <div class="text-[#5EEAD4] group-hover:translate-x-0.5 transition-transform">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="section-card group rounded-3xl overflow-hidden flex flex-col cursor-pointer h-full" data-section-id="4">
+        <div class="relative h-44 overflow-hidden">
+          <img src="/images/abomination.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]" />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+          <div class="absolute top-4 left-4 z-10 w-8 h-8 rounded-2xl flex items-center justify-center text-sm font-mono font-semibold" style="background: rgba(10,10,15,0.75); color: #5EEAD4; border: 1px solid #5EEAD440">4</div>
+          <div class="absolute top-4 left-[52px]">
+            <div class="px-3 py-1 rounded-2xl text-[10px] font-bold tracking-[1.5px] flex items-center gap-x-1.5" style="background: rgba(94,234,212,0.13); color: #5EEAD4; border: 1px solid rgba(94,234,212,0.22)">
+              <i class="fa-solid fa-exclamation-triangle text-xs"></i>
+              <span>THE ABOMINATION</span>
+            </div>
+          </div>
+          <div class="absolute bottom-4 right-4 text-right">
+            <div class="font-mono text-xs text-white/60">13:14–23</div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl tracking-[-0.02em] leading-none mb-2.5 pr-2">The Abomination of Desolation</h3>
+          <p class="text-[#a1a1aa] text-[13.5px] flex-1 leading-snug">When the abomination of desolation stands where he ought not to be, those in Judea must flee without hesitation.</p>
+          <div class="mt-4 flex justify-end text-sm">
+            <div class="text-[#5EEAD4] group-hover:translate-x-0.5 transition-transform">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="section-card group rounded-3xl overflow-hidden flex flex-col cursor-pointer h-full" data-section-id="5">
+        <div class="relative h-44 overflow-hidden">
+          <img src="/images/son-of-man-coming.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]" />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+          <div class="absolute top-4 left-4 z-10 w-8 h-8 rounded-2xl flex items-center justify-center text-sm font-mono font-semibold" style="background: rgba(10,10,15,0.75); color: #5EEAD4; border: 1px solid #5EEAD440">5</div>
+          <div class="absolute top-4 left-[52px]">
+            <div class="px-3 py-1 rounded-2xl text-[10px] font-bold tracking-[1.5px] flex items-center gap-x-1.5" style="background: rgba(94,234,212,0.13); color: #5EEAD4; border: 1px solid rgba(94,234,212,0.22)">
+              <i class="fa-solid fa-cloud-moon text-xs"></i>
+              <span>THE SON OF MAN</span>
+            </div>
+          </div>
+          <div class="absolute bottom-4 right-4 text-right">
+            <div class="font-mono text-xs text-white/60">13:24–27</div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl tracking-[-0.02em] leading-none mb-2.5 pr-2">The Coming of the Son of Man</h3>
+          <p class="text-[#a1a1aa] text-[13.5px] flex-1 leading-snug">After that tribulation, cosmic signs will appear. Then the Son of Man will come in clouds with great power and glory.</p>
+          <div class="mt-4 flex justify-end text-sm">
+            <div class="text-[#5EEAD4] group-hover:translate-x-0.5 transition-transform">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="section-card group rounded-3xl overflow-hidden flex flex-col cursor-pointer h-full" data-section-id="6">
+        <div class="relative h-44 overflow-hidden">
+          <img src="/images/watchful-servant.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]" />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
+          <div class="absolute top-4 left-4 z-10 w-8 h-8 rounded-2xl flex items-center justify-center text-sm font-mono font-semibold" style="background: rgba(10,10,15,0.75); color: #5EEAD4; border: 1px solid #5EEAD440">6</div>
+          <div class="absolute top-4 left-[52px]">
+            <div class="px-3 py-1 rounded-2xl text-[10px] font-bold tracking-[1.5px] flex items-center gap-x-1.5" style="background: rgba(94,234,212,0.13); color: #5EEAD4; border: 1px solid rgba(94,234,212,0.22)">
+              <i class="fa-solid fa-clock text-xs"></i>
+              <span>WATCH &amp; STAY AWAKE</span>
+            </div>
+          </div>
+          <div class="absolute bottom-4 right-4 text-right">
+            <div class="font-mono text-xs text-white/60">13:28–37</div>
+          </div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl tracking-[-0.02em] leading-none mb-2.5 pr-2">The Lesson of the Fig Tree &amp; The Call to Vigilance</h3>
+          <p class="text-[#a1a1aa] text-[13.5px] flex-1 leading-snug">Learn from the fig tree. No one knows the day or hour. Therefore, stay awake.</p>
+          <div class="mt-4 flex justify-end text-sm">
+            <div class="text-[#5EEAD4] group-hover:translate-x-0.5 transition-transform">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
