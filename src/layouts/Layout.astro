@@ -71,5 +71,12 @@ const { title, description = "An illustrated, contemplative reading experience o
   </head>
   <body class="antialiased">
     <slot />
+
+    <footer class="border-t border-white/10 bg-[#0a0a0f]">
+      <div class="max-w-6xl mx-auto px-6 py-8 text-xs text-[#666] flex flex-col md:flex-row md:items-center md:justify-between gap-y-2">
+        <div>ESV Study Bible • Illustrated Reading Experience</div>
+        <div>Built with Astro • Designed for slow, contemplative reading</div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -2,13 +2,15 @@
 
 A contemplative, beautifully designed reading experience of the Gospel of Mark using the ESV Study Bible commentary.
 
-## Current Status
+**Now built with Astro** for better maintainability and developer experience as the project grows toward the full New Testament.
 
-This project has been migrated from pure static HTML to **Astro**.
+## Current Chapters
 
-### Chapters Currently Available
-- [Mark 12](/mark-12) — Questions in the Temple
-- [Mark 13](/mark-13) — The Olivet Discourse
+- **Mark 12** — Questions in the Temple  
+  (The Parable of the Tenants, Taxes to Caesar, Resurrection, Great Commandment, Whose Son?, True Devotion)
+
+- **Mark 13** — The Olivet Discourse  
+  (Temple Foretold, Signs & Persecution, Abomination of Desolation, Coming of the Son of Man, Fig Tree & Vigilance)
 
 ## Development
 
@@ -17,19 +19,26 @@ npm install
 npm run dev
 ```
 
+Open http://localhost:4321
+
 ## Goals
 
 - Build the entire New Testament in this illustrated, meditative style
-- Excellent reading experience on desktop and mobile
-- Easy to add new chapters
-- Simple to share with friends
+- Excellent reading experience
+- Easy to add and maintain many chapters
+- Simple to share (static output)
 
-## Tech Stack
+## Tech
 
 - Astro
-- Tailwind CSS (via CDN during migration)
-- Vanilla JavaScript for interactive elements (modals, etc.)
+- Tailwind CSS
+- Vanilla JS for interactive modals
+- Static output (can be hosted anywhere)
 
 ## Design
 
-Dark theme with light teal (#5EEAD4) accents, elegant typography, and custom generated illustrations for key scenes.
+Dark theme (#0a0a0f) with light teal accents (#5EEAD4), elegant serif headings, and custom illustrations for key scenes.
+
+---
+
+*This project is a work in progress as we build toward the full New Testament.*
