@@ -45,43 +45,37 @@ import Layout from '../layouts/Layout.astro';
 
   <div class="max-w-6xl mx-auto px-6 pt-12 pb-20">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Mark 12 Card -->
-      <a href="/mark-12" class="chapter-card group rounded-3xl p-8 block">
-        <div class="flex items-start justify-between">
+      <!-- Mark 12 Card - with background image like original -->
+      <a href="/mark-12" class="chapter-card group rounded-3xl overflow-hidden block relative" style="min-height: 320px;">
+        <img src="/images/temple-foretold.jpg" alt="Mark 12" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80"></div>
+        <div class="relative p-8 flex flex-col h-full">
           <div>
             <div class="text-[#5EEAD4] text-sm font-semibold tracking-[2px]">CHAPTER 12</div>
-            <h2 class="heading-serif text-4xl mt-2 tracking-[-0.02em]">Questions in the Temple</h2>
+            <h2 class="heading-serif text-4xl mt-2 tracking-[-0.02em] text-white">Questions in the Temple</h2>
           </div>
-          <div class="text-6xl font-light text-[#5EEAD4]/30 group-hover:text-[#5EEAD4]/50 transition-colors">12</div>
-        </div>
-
-        <p class="mt-6 text-[#c8c8d0] leading-relaxed">
-          Jesus teaches in the Temple through the Parable of the Tenants, answers questions about taxes, resurrection, and the greatest commandment, and highlights true devotion through the widow’s offering.
-        </p>
-
-        <div class="mt-8 flex items-center text-[#5EEAD4] font-medium">
-          <span>Enter Chapter</span>
-          <i class="fa-solid fa-arrow-right ml-3 transition group-hover:translate-x-1"></i>
+          <div class="flex-1"></div>
+          <div class="mt-4 flex items-center text-[#5EEAD4] font-medium">
+            <span>Enter Chapter</span>
+            <i class="fa-solid fa-arrow-right ml-3 transition group-hover:translate-x-1"></i>
+          </div>
         </div>
       </a>
 
-      <!-- Mark 13 Card -->
-      <a href="/mark-13" class="chapter-card group rounded-3xl p-8 block">
-        <div class="flex items-start justify-between">
+      <!-- Mark 13 Card - with background image -->
+      <a href="/mark-13" class="chapter-card group rounded-3xl overflow-hidden block relative" style="min-height: 320px;">
+        <img src="/images/son-of-man-coming.jpg" alt="Mark 13" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80"></div>
+        <div class="relative p-8 flex flex-col h-full">
           <div>
             <div class="text-[#5EEAD4] text-sm font-semibold tracking-[2px]">CHAPTER 13</div>
-            <h2 class="heading-serif text-4xl mt-2 tracking-[-0.02em]">The Olivet Discourse</h2>
+            <h2 class="heading-serif text-4xl mt-2 tracking-[-0.02em] text-white">The Olivet Discourse</h2>
           </div>
-          <div class="text-6xl font-light text-[#5EEAD4]/30 group-hover:text-[#5EEAD4]/50 transition-colors">13</div>
-        </div>
-
-        <p class="mt-6 text-[#c8c8d0] leading-relaxed">
-          From the Mount of Olives, Jesus foretells the destruction of the Temple, warns of coming tribulation and deception, and calls his disciples to watchful endurance as he promises to return in glory.
-        </p>
-
-        <div class="mt-8 flex items-center text-[#5EEAD4] font-medium">
-          <span>Enter Chapter</span>
-          <i class="fa-solid fa-arrow-right ml-3 transition group-hover:translate-x-1"></i>
+          <div class="flex-1"></div>
+          <div class="mt-4 flex items-center text-[#5EEAD4] font-medium">
+            <span>Enter Chapter</span>
+            <i class="fa-solid fa-arrow-right ml-3 transition group-hover:translate-x-1"></i>
+          </div>
         </div>
       </a>
     </div>
