@@ -84,6 +84,29 @@ const { title, description = "An illustrated, contemplative reading experience o
     </style>
   </head>
   <body class="antialiased">
+    <!-- Main VIGIL Header (matching original design) -->
+    <nav class="sticky top-0 z-50 border-b border-white/10 bg-[#0a0a0f]/95 backdrop-blur-xl">
+      <div class="app-container max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-x-3">
+          <div class="w-9 h-9 rounded-2xl bg-gradient-to-br from-[#5EEAD4] via-[#4BC4B0] to-[#5EEAD4] flex items-center justify-center shadow-lg shadow-[#5EEAD4]/20">
+            <i class="fa-solid fa-eye text-[#0a0a0f] text-xl"></i>
+          </div>
+          <div>
+            <div class="font-semibold text-2xl tracking-[-0.04em] leading-none">VIGIL</div>
+            <div class="text-[10px] text-[#a1a1aa] -mt-0.5">MARK</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-x-3">
+          <button onclick="showFullScripture()" 
+                  class="w-9 h-9 flex items-center justify-center border border-white/15 hover:bg-white/5 hover:border-white/30 rounded-2xl transition-colors text-[#a1a1aa] hover:text-white"
+                  title="Full Scripture">
+            <i class="fa-solid fa-book text-sm"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
     <slot />
 
     <footer class="border-t border-white/10 bg-[#0a0a0f]">
@@ -92,5 +115,12 @@ const { title, description = "An illustrated, contemplative reading experience o
         <div>Built with Astro • Designed for slow, contemplative reading</div>
       </div>
     </footer>
+
+    <script>
+      // Placeholder for full scripture modal if needed
+      window.showFullScripture = () => {
+        alert('Full Scripture view coming soon in this Astro version');
+      };
+    </script>
   </body>
 </html>
